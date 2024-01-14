@@ -1,0 +1,22 @@
+<header class="bg-gray-800 text-white p-4">
+  <div class="flex items-center justify-between">
+    <div class="flex items-center">
+      <img src="./assets/image/logo.png" alt="Logo" class="h-8 w-8 mr-2" height="151" width="112">
+      <h1 class="text-2xl font-bold">Reevon Secure</h1>
+    </div>
+    <nav>
+      <ul class="flex">
+        <li class="mr-4">
+          <button (click)="navigateToEncrypt()" [ngClass]="{'bg-blue-400 text-white': isEncryptActive, 'bg-gray-400 text-gray-300 cursor-pointer': !isEncryptActive}" class="px-4 py-2 rounded-full focus:outline-none hover:bg-blue-700 relative">
+            <span class="fas fa-lock"></span> Encrypter
+          </button>
+        </li>
+        <li>
+          <button (click)="navigateToDecrypt()" [ngClass]="{'bg-blue-400 text-white': isDecryptActive, 'bg-gray-400 text-gray-300 cursor-pointer': !isDecryptActive}" class="px-4 py-2 rounded-full focus:outline-none hover:bg-blue-700 relative">
+            <span class="fas fa-lock-open"></span> Decrypter
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
